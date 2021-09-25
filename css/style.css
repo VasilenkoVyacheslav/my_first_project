@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
 
-/*@font-face {*/
-/*    font-family: 'montserratbold';*/
-/*    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),*/
-/*    url('../fonts/montserrat-bold-webfont.woff') format('woff');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
+/*@font-face {
+    font-family: 'montserrat_alternatesbold';
+    src: url('../fonts/montserratalternates-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserratalternates-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-/*}*/
-
-/*@font-face {*/
-/*    font-family: 'montserratregular';*/
-/*    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),*/
-/*    url('../fonts/montserrat-regular-webfont.woff') format('woff');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-
-/*}*/
+@font-face {
+    font-family: 'montserrat_alternatesmedium';
+    src: url('../fonts/montserratalternates-medium-webfont.woff2') format('woff2'),
+         url('../fonts/montserratalternates-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}*/
 
 * {
     margin: 0;
@@ -35,7 +33,7 @@ img {
 
 body {
     color: #000;
-    font: 400 14px/24px 'Roboto Slab', "Times New Roman", Times, serif;
+    font: 400 14px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
 }
 
 a {
@@ -59,11 +57,12 @@ table {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+    flex-direction: row;
 }
 
 .main_banner {
     min-height: 100vh;
-    background: url("../images/main-banner.jpg") no-repeat 50% 50%;
+    background: url("../images/main_banner.jpg") no-repeat 50% 50%;
     background-size: cover;
 }
 
@@ -83,7 +82,6 @@ table {
     color: #fff;
     font: 400 14px/24px 'Montserrat', Arial, Tahoma, sans-serif;
     padding: 5px 13px;
-    transition: .3s;
 }
 
 .navigation a:hover {
@@ -92,4 +90,133 @@ table {
 
 .navigation a:last-child {
     padding-right: 0;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    margin-top: 5px;
+    display: none;
+    background: url("../images/menu.png") no-repeat 50%;
+    background-size: 100%;
+}
+
+.main-content .container {
+    display: flex;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+/*#services {
+    height: 870px;
+}*/
+
+.banner_text {
+    display: flex;
+    height: 565px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+h1 {
+    font: 500 48px 'Montserrat', Arial, Tahoma, sans-serif;
+    margin: 263px 0 34px 0;
+}
+
+h2 {
+    font: 400 20px 'Roboto Slab', 'Times New Roman', Times, serif;
+    text-transform: none;
+}
+
+.button {
+    display: inline-block;
+    height: 52px;
+    width: 180px;
+    margin-top: 55px;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    font: 500 16px 'Montserrat', Arial, Tahoma, sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #fff;
+    color: #c0301c;
+}
+
+@media  (max-width: 768px) {
+
+    .logo {
+        margin-left: 60px;
+    }  
+      
+    .navigation {
+        position: relative;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #c0301c;
+        font-weight: 600;
+    }
+
+    .mobile-menu {
+        display: inline-block;
+        margin-right: 60px;
+    }
+
+    .navigation .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding: 20px 15px;
+        text-align: center;
+        z-index: 10;
+        background: #fff;
+        /*border: 2px dotted #c0301c;*/
+        border-radius: 4px;
+    }
+
+    .banner_text {
+        height: 365px;
+    }
+
+    h1 {
+        margin: 300px 0 34px 0;
+    }
+}
+
+@media  (max-width: 380px) {
+
+    h1 {
+        font-size: 34px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    .button {
+        font-size: 14px;
+    }
+}
+
+@media  (max-width: 285px) {
+
+    .logo {
+        padding-right: 5px;
+    }
 }
