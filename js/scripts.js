@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('.mobile-menu').on('click', function () {
-        $('.menu').slideToggle();
+        $('.menu').slideToggle().css('right', '0px !important').css('left', 'auto');
     })
 
     const swiper = new Swiper('.gallery', {
@@ -19,4 +19,5 @@ $(document).ready(function () {
         spaceBetween: 30,
         speed: 400
     });
+
 })
